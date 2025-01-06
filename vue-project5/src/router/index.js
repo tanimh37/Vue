@@ -1,6 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomePage from '@/views/HomePage.vue'
-import AboutPage from '@/views/AboutPage.vue'
+import HomeView from '../views/HomeView.vue'
+import FoodItem from '@/views/FoodItem.vue'
+import Todolist from '@/views/Todolist.vue'
+import RefPage from '@/views/RefPage.vue'
+import LifeCycle from '@/views/LifeCycle.vue'
+import FormInputs from '@/views/FormInputs.vue'
+import FlowerItems from '@/views/FlowerItems.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -8,13 +14,42 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomePage,
+      component: HomeView,
     },
     {
-      path: '/about',
-      name: 'about',
-      component: AboutPage,
+      path: '/food',
+      name: 'Food',
+      component: FoodItem,
     },
+    {
+      path: '/todo',
+      name: 'ToDo',
+      component: Todolist,
+    },
+    {
+      path: '/ref',
+      name: 'ref',
+      component: RefPage,
+    },
+    {
+      path: '/life',
+      name: 'lifecycle',
+      component: LifeCycle,
+    },
+
+    {
+      path: '/form',
+      name: 'form',
+      component: FormInputs,
+    },
+
+    {
+      path: '/flowers',
+      name: 'flowers',
+      component: FlowerItems,
+    },
+    
+    
   ],
 })
 
